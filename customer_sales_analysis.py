@@ -35,7 +35,7 @@ cdata.drop_duplicates(inplace = True)
 master_data = cdata.merge(sdata, on = 'customer_id', how = 'inner')
 #m_sample = master_data.head(10)
 
-master_data['amount'] = master_data['quantity'] * sdata['price']                #Creating an 'amount' column for future use
+master_data['amount'] = master_data['quantity'] * master_data['price']                #Creating an 'amount' column for future use
 
 master_data.to_csv('master_data.csv')
 
